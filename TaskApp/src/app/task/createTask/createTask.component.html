@@ -1,0 +1,92 @@
+<div class="fixedbackground">
+  <section id="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="row paddingFormElements">
+            <div class="col-md-12">
+              <h1 align="center">Aufgabe erstellen</h1>
+            </div>
+          </div>
+
+          <form #createTaskForm="ngForm">
+
+            <div class="row paddingFormElements">
+              <div class="col-md-2">
+                <label class="labelFormSize">Ersteller: </label>
+              </div>
+              <div class="col-md-10">
+                <select id="userid" name="userid" class="form-control fullscreen" [(ngModel)]="selectedUser.userid" #userid="ngModel" required>
+                  <option [ngValue]="null" disabled>Wähle den Ersteller</option>
+                  <option *ngFor="let user of userData" [ngValue]="user.userid">{{ user.firstName }}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row paddingFormElements">
+              <div class="col-md-2">
+                <label class="labelFormSize">Aufgabenname: </label>
+              </div>
+              <div class="col-md-10">
+                <input id="name" name="name" class="form-control fullscreen" required minlength="4" [(ngModel)]="newTask.name" #name="ngModel"
+                />
+              </div>
+            </div>
+
+            <div class="row paddingFormElements">
+              <div class="col-md-2">
+                <label class="labelFormSize">Enddatum: </label>
+              </div>
+              <div class="col-md-5">
+                <input id="bsValue" name="bsValue" class="form-control fullscreen" [minDate]="minDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="bsValue">
+              </div>
+              <div class="col-md-5">
+                <button class="btn datepickerButton fullscreen" (click)="dp.toggle()">Date Picker</button>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-6">
+                <button type="button" class="btn btn-danger buttonStyle" (click)="onBack()">
+                  <span>
+                    <i class="glyphicon glyphicon-remove btn-icon" aria-hidden="true"></i>
+                  </span> Abbrechen
+                </button>
+              </div>
+
+              <div class="col-md-6">
+                <button type="button" class="btn btn-primary buttonStyle" (click)="createTask()" [disabled]="createTaskForm.invalid">
+                  <span>
+                    <i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i>
+                  </span> Speichern
+                </button>
+              </div>
+            </div>
+
+            <div class="errorStyle">
+              <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+                <div *ngIf="name.errors.required">
+                  Ein Name muss vorhanden sein.
+                </div>
+                <div *ngIf="name.errors.minlength">
+                  Der Name muss mindestens 4 Zeichen lang sein.
+                </div>
+              </div>
+
+              <div *ngIf="userid.invalid && (userid.dirty || userid.touched)" class="alert alert-danger">
+                <div *ngIf="userid.errors.required">
+                  Ein Ersteller muss vorhanden sein.
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

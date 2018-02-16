@@ -1,0 +1,65 @@
+<h1 align="center">Kanban Board</h1>
+
+<button type="button" class="btn btn-primary" (click)="navigateToCreateTask()">
+  <span>
+    <i class="glyphicon glyphicon-plus btn-icon" aria-hidden="true"></i>
+  </span> Aufgabe erstellen
+</button>
+
+<h1 class="kanbanHeadingToDo">ToDo</h1>
+<h1 class="kanbanHeadingProcessing">Doing</h1>
+<h1 class="kanbanHeadingDone">Done</h1>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="col-md-4">
+      <div class='toDoCell' [dragula]='"bag-one"' [dragulaModel]="todoData">
+        <div class="cellColor" [attr.item-id]="toDoItem.taskid" *ngFor="let toDoItem of todoData" (click)="navigateToClickedTask(toDoItem.taskid)">
+          <b>AufgabenID: </b> {{toDoItem.taskid}}
+          <br/>
+          <b>Ersteller: </b> {{toDoItem.creator.firstName}}
+          <br/>
+          <b>Aufgabenname: </b> {{toDoItem.name}}
+          <br/>
+          <b>Erstell-Datum: </b> {{toDoItem.startDate}}
+          <br/>
+          <b>End-Datum: </b> {{toDoItem.endDate}}
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class='processingCell' [dragula]='"bag-one"' [dragulaModel]="processingData">
+        <div class="cellColor" [attr.item-id]="processingDataItem.taskid" *ngFor="let processingDataItem of processingData" (click)="navigateToClickedTask(processingDataItem.taskid)">
+          <b>AufgabenID: </b> {{processingDataItem.taskid}}
+          <br/>
+          <b>Ersteller: </b> {{processingDataItem.creator.firstName}}
+          <br/>
+          <b>Aufgabenname: </b> {{processingDataItem.name}}
+          <br/>
+          <b>Erstell-Datum: </b> {{processingDataItem.startDate}}
+          <br/>
+          <b>End-Datum: </b> {{processingDataItem.endDate}}
+      </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class='doneCell' [dragula]='"bag-one"' [dragulaModel]="doneData">
+        <div class="cellColor" [attr.item-id]="doneDataItem.taskid" *ngFor="let doneDataItem of doneData" (click)="navigateToClickedTask(doneDataItem.taskid)">
+          <b>AufgabenID: </b> {{doneDataItem.taskid}}
+          <br/>
+          <b>Ersteller: </b> {{doneDataItem.creator.firstName}}
+          <br/>
+          <b>Aufgabenname: </b> {{doneDataItem.name}}
+          <br/>
+          <b>Erstell-Datum: </b> {{doneDataItem.startDate}}
+          <br/>
+          <b>End-Datum: </b> {{doneDataItem.endDate}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

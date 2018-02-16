@@ -1,0 +1,40 @@
+<div class="fixedbackground">
+  <section id="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Aufgabenübersicht</h2>
+          <table class="table table-striped">
+            <thead>
+              <tr class="firstrow">
+                <th>TaskId</th>
+                <th>Ersteller</th>
+                <th>Aufgabenname</th>
+                <th>Anfangsdatum</th>
+                <th>Enddatum</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr *ngFor="let item of taskData" (click)="navigateToClickedTask(item.taskid)">
+                <td>{{item.taskid}}</td>
+                <td>{{item.creator.firstName}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.startDate}}</td>
+                <td>{{item.endDate}}</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <button type="button" class="btn btn-primary" (click)="navigateToCreateTask()">
+            <span>
+              <i class="glyphicon glyphicon-plus btn-icon" aria-hidden="true"></i>
+            </span> Aufgabe erstellen
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

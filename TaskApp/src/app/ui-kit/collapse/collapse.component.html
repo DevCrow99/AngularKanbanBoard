@@ -1,0 +1,21 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab">
+            <h4 class="panel-title">
+                <p class="icon-toggle collapsed" role="button" (click)="isCollapsed = !isCollapsed" [collapse]="!isCollapsed">
+                    Collapse Panel Titel
+                </p>
+                <p class="icon-toggle" role="button" (click)="isCollapsed = !isCollapsed" [collapse]="isCollapsed">
+                    Collapse Panel Titel
+                </p>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse in" [collapse]="isCollapsed">
+            <div class="panel-body">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <br/> At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.<br/> At
+                vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br/>
+            </div>
+        </div>
+    </div>
+</div>

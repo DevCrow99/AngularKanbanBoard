@@ -1,0 +1,613 @@
+    /* ################## Primärfarben ################## */
+    /* ################## Sekundärfarben ################## */
+    /* ++++++++++++++++++ Imports ++++++++++++++++++ */
+    /* ################## BODY ################## */
+    
+    body {
+        font-family: "Calibri", sans-serif;
+        background-color: #EEEEEE;
+    }
+    
+    .footer {
+        position: fixed;
+        background-image: url("./NUE_Logo_solo_white.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 2.5em;
+        width: 100%;
+        bottom: 0 !important;
+        height: 3em;
+        z-index: 5;
+        background-color: #003273;
+    }
+    
+    .fixedbackground {
+        background-color: white;
+        margin: 0;
+        padding: 1em;
+        display: table;
+        position: absolute;
+        height: 100%;
+        box-shadow: 5px 0 15px -4px rgba(208, 208, 208, 0.8), -5px 0 15px -4px rgba(208, 208, 208, 0.8);
+    }
+    
+    .fixforie {
+        position: relative;
+    }
+    
+    @media (max-width: 1350px) {
+        body {
+            background-color: white;
+            position: auto;
+            height: auto;
+        }
+        .fixedbackground {
+            box-shadow: none;
+            display: unset;
+            position: unset;
+        }
+    }
+    /* ################## BUTTON - BTN ################## */
+    
+    .btn:active,
+    .btn:focus,
+    .btn:hover,
+    .btn:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+    }
+    
+    .btn-primary.active.focus,
+    .btn-primary.active:focus,
+    .btn-primary.active:hover,
+    .btn-primary:active.focus,
+    .btn-primary:active:focus,
+    .btn-primary:active:hover,
+    .open>.dropdown-toggle.btn-primary.focus,
+    .open>.dropdown-toggle.btn-primary:focus,
+    .open>.dropdown-toggle.btn-primary:hover {
+        border-color: transparent;
+        outline: none;
+        background-color: #25ade9;
+    }
+    /* ################## BUTTON - BTN-PRIMARY ################## */
+    
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:hover,
+    .btn-primary:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+    }
+    
+    .btn-primary,
+    .btn-primary:focus {
+        background: #FDAB48;
+        color: #fff;
+        border-radius: 0;
+        border-color: #FDAB48;
+        outline: none !important;
+    }
+    
+    .btn-primary.active.focus,
+    .btn-primary.active:hover,
+    .btn-primary:active.focus,
+    .btn-primary:active:hover,
+    .btn-primary:hover {
+        background-color: #25ade9;
+        box-shadow: none !important;
+        border: auto;
+        border-color: transparent;
+        outline: 0 !important;
+    }
+    /* ################## BUTTON - BTN-CLASSIC ################## */
+    
+    .btn-classic:active,
+    .btn-classic:focus,
+    .btn-classic:hover,
+    .btn-classic:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+        outline: none;
+    }
+    
+    .btn-classic,
+    .btn-classic:focus {
+        background: #999;
+        color: #fff;
+        border-radius: 0;
+        border-color: #999;
+    }
+    
+    .btn-classic.active.focus,
+    .btn-classic.active:hover,
+    .btn-classic:active.focus,
+    .btn-classic:active:hover,
+    .btn-classic:hover {
+        background-color: #25ade9 !important;
+        box-shadow: none !important;
+        border: auto !important;
+        border-color: transparent !important;
+        outline: none !important;
+        color: white !important;
+    }
+    /* ################## BUTTON - BTN-SUCCESS ################## */
+    
+    .btn-success:active,
+    .btn-success:hover,
+    .btn-success:focus,
+    .btn-success:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+        outline: none;
+    }
+    
+    .btn-success,
+    .btn-success:focus {
+        background: #2BC47E;
+        color: #fff;
+        border-radius: 0;
+        border-color: #2BC47E;
+    }
+    
+    .btn-success.active.focus,
+    .btn-success.active:hover,
+    .btn-success:active.focus,
+    .btn-success:active:hover,
+    .btn-success:hover {
+        background-color: #25ade9;
+        box-shadow: none !important;
+        border: auto;
+        border-color: transparent;
+        outline: 0 !important;
+    }
+    /* ################## BUTTON - BTN-INFO ################## */
+    
+    .btn-info:active,
+    .btn-info:focus,
+    .btn-info:hover,
+    .btn-info:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+        outline: none;
+    }
+    
+    .btn-info,
+    .btn-info:focus {
+        background: #50C3DA;
+        color: #fff;
+        border-radius: 0;
+        border-color: #50C3DA;
+    }
+    
+    .btn-info.active.focus,
+    .btn-info.active:hover,
+    .btn-info:active.focus,
+    .btn-info:active:hover,
+    .btn-info:hover {
+        background-color: #25ade9;
+        box-shadow: none !important;
+        border: auto;
+        border-color: transparent;
+        outline: 0 !important;
+    }
+    /* ################## BUTTON - BTN-WARNING ################## */
+    
+    .btn-warning:active,
+    .btn-warning:focus,
+    .btn-warning:hover,
+    .btn-warning:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+        outline: none;
+    }
+    
+    .btn-warning,
+    .btn-warning:focus {
+        background: #FC494D;
+        color: #fff;
+        border-radius: 0;
+        border-color: #FC494D;
+    }
+    
+    .btn-warning.active.focus,
+    .btn-warning.active:hover,
+    .btn-warning:active.focus,
+    .btn-warning:active:hover,
+    .btn-warning:hover {
+        background-color: #25ade9;
+        box-shadow: none !important;
+        border: auto;
+        border-color: transparent;
+        outline: 0 !important;
+    }
+    /* ################## BUTTON - BTN-DANGER ################## */
+    
+    .btn-danger:active,
+    .btn-danger:focus,
+    .btn-danger:hover,
+    .btn-danger:visited {
+        background: #25ade9;
+        color: #fff;
+        border-radius: 0;
+        border-color: #25ade9;
+        outline: none;
+    }
+    
+    .btn-danger,
+    .btn-danger:focus {
+        background: #D6405F;
+        color: #fff;
+        border-radius: 0;
+        border-color: #D6405F;
+    }
+    
+    .btn-danger.active.focus,
+    .btn-danger.active:hover,
+    .btn-danger:active.focus,
+    .btn-danger:active:hover,
+    .btn-danger:hover {
+        background-color: #25ade9;
+        box-shadow: none !important;
+        border: auto;
+        border-color: transparent;
+        outline: 0 !important;
+    }
+    /* ################## BUTTON - BTN-Link ################## */
+    
+    .btn-link:active,
+    .btn-link:focus,
+    .btn-link:hover,
+    .btn-link:visited {
+        color: #25ade9;
+        background: transparent;
+        border-color: transparent;
+        outline: none;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .btn-link,
+    .btn-link:focus {
+        color: #003273;
+    }
+    
+    .btn-link.active.focus,
+    .btn-link.active:hover,
+    .btn-link:active.focus,
+    .btn-link:active:hover,
+    .btn-link:hover {
+        background-color: #25ade9;
+        box-shadow: none !important;
+        text-decoration: none;
+        border: auto;
+        border-color: transparent;
+        outline: 0 !important;
+        color: white;
+    }
+    /* ################## BUTTON - BTN-WHITE ################## */
+    
+    .btn-white {
+        background: #fff;
+        color: #000;
+        border-radius: 0;
+        border-color: #003273;
+    }
+    
+    .btn-white:active .btn-white:focus .btn-white:hover .btn-white:visited {
+        background: #fff;
+        color: #000;
+        border-radius: 0;
+        border-color: #003273;
+    }
+    /* ################## BUTTON - Upload ################## */
+    
+    .fileUpload {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    
+    .dropdown-toggle {
+        background-color: #fff;
+        color: #000;
+        border-color: #003273;
+    }
+    
+    .open>.dropdown-toggle.btn-default:focus,
+    .open>.dropdown-toggle.btn-default:active,
+    .open>.dropdown-toggle.btn-default:hover,
+    .open>.dropdown-toggle.btn-default:visited {
+        color: #000;
+        background-color: #fff;
+        border-color: #003273;
+    }
+    
+    .dropdown-menu>li>a:focus,
+    .dropdown-menu>li>a:hover {
+        color: #fff;
+        background-color: #25ade9;
+    }
+    
+    .form-control {
+        border: 1px solid #003273;
+        border-radius: 0;
+    }
+    
+    .form-control:focus {
+        border-color: #25ade9;
+    }
+    
+    .input-group-addon {
+        background-color: #E6EEFF;
+        border: 1px solid #003273;
+        border-radius: 0;
+    }
+    /* ################## Glyphicon ################## */
+    
+    .glyphicon {
+        color: #003273;
+    }
+    
+    .icon-active:active,
+    .icon-active:focus,
+    .icon-active:hover,
+    .icon-active:visited {
+        color: #25ade9;
+        background: transparent;
+    }
+    /* ################## FontAwesome ################## */
+    
+    .fa {
+        color: #003273;
+    }
+    
+    .fa-white {
+        color: #fff;
+    }
+    /* ################## HEADER ################## */
+    
+    .logo-header {
+        background-color: white;
+        z-index: 500;
+    }
+    
+    .nvg-logo-blue {
+        background-image: url("../ignoreme/nvg.png");
+        width: 100%;
+        height: 5em;
+        background-size: 15em;
+        position: relative;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: 15px 50%;
+    }
+    
+    @media (max-width: 768px) {
+        .nvg-logo-blue {
+            margin-left: -2.5em;
+        }
+    }
+    /* ################## Navigation ################## */
+    
+    .nav-pills li>a {
+        color: #003273;
+        border-radius: 0;
+    }
+    
+    .nav-pills li.active>a,
+    a:hover,
+    .nav-pills li.active>a,
+    a:focus,
+    .nav-pills li.active>a,
+    a:active {
+        background-color: #003273;
+    }
+    
+    .nav-pills li.active>a:hover,
+    .nav-pills li.active>a:focus,
+    .nav-pills li.active>a:active {
+        background-color: #25ade9;
+    }
+    
+    @media (min-width: 768px) {
+        .navbar-collapse {
+            position: static;
+            left: auto;
+            right: auto;
+            background: transparent;
+        }
+    }
+    
+    .navbar-toggle {
+        border-color: transparent;
+        float: left;
+    }
+    
+    .navbar-toggle:focus .icon-bar,
+    .navbar-toggle:hover .icon-bar,
+    .navbar-toggle:active .icon-bar {
+        background-color: #25ade9;
+    }
+    
+    .icon-bar {
+        background-color: #003273;
+    }
+    
+    .nav>li>a:focus,
+    .nav>li>a:hover {
+        color: #25ade9;
+    }
+    /* ++++++++++++++++++ Imports ++++++++++++++++++ */
+    
+    .pagination>li>a,
+    .pagination>li>span {
+        color: #003273;
+    }
+    
+    .pagination>li>a:focus,
+    .pagination>li>a:hover,
+    .pagination>li>span:focus,
+    .pagination>li>span:hover {
+        color: #25ade9;
+        background-color: #E6EEFF;
+        border-color: #E6EEFF;
+    }
+    /* ++++++++++++++++++ Imports ++++++++++++++++++ */
+    /* ################## Panels  ##################*/
+    
+    .panel {
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    .panel-title {
+        font-weight: bold;
+    }
+    
+    .icon-toggle {
+        padding-top: 10px;
+        color: #25ade9;
+    }
+    
+    .icon-toggle.collapsed {
+        color: #003273;
+    }
+    
+    .panel-default>.panel-heading {
+        background-color: transparent;
+    }
+    
+    .icon-toggle:before {
+        font-family: FontAwesome;
+        content: "\f078";
+        color: #25ade9;
+    }
+    
+    .icon-toggle.collapsed:before {
+        font-family: FontAwesome;
+        content: "\f054";
+        color: #003273;
+    }
+    
+    .panel-default {
+        border-color: transparent;
+    }
+    
+    .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        border-top: 1px solid #003273;
+        border-bottom: 1px solid #003273;
+        background: #E6EEFF;
+    }
+    /* ++++++++++++++++++ Imports ++++++++++++++++++ */
+    /* ################## Table ################## */
+    
+    thead {
+        color: #003273;
+        background-color: #B3CBFF;
+    }
+    
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: #E6EEFF;
+    }
+    
+    .table>thead>tr>th {
+        border-bottom: 1px solid #003273;
+    }
+    
+    .table:hover>tbody>tr:hover {
+        background-color: #25ade9;
+    }
+    /* ++++++++++++++++++ Imports ++++++++++++++++++ */
+    /* ################## TABS ################## */
+    
+    .nav-tabs {
+        border-bottom: none;
+    }
+    
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+        color: #25ade9;
+        border: none;
+        font-weight: bold;
+    }
+    
+    .nav-tabs>li>a {
+        border: none;
+        border-radius: 0;
+        background-color: #003273;
+        color: #fff;
+    }
+    
+    .nav-tabs>li>a:focus,
+    .nav-tabs>li>a:hover {
+        text-decoration: none;
+        background-color: #fff;
+        color: #25ade9;
+        font-weight: bold;
+    }
+    /* ++++++++++++++++++ Imports ++++++++++++++++++ */
+    /* ################## H1-H6 ################## */
+    
+    h1,
+    a {
+        color: #003273;
+    }
+    
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #000;
+    }
+    
+    a:hover,
+    a:active,
+    a:focus {
+        background: transparent;
+        color: #25ade9;
+    }
+    /* ################## Selector (like a dropdown) ################## */
+    
+    .selector {
+        font-size: 17px;
+        color: #000;
+    }
+    
+    .col-md-12 {
+        float: none;
+    }
+    
+    .clearfix:after {
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0px;
+    }

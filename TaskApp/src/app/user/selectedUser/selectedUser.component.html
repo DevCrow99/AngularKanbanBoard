@@ -1,0 +1,48 @@
+<div class="fixedbackground">
+  <section id="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Benutzeransicht</h2>
+          <table>
+            <tr>
+              <td>
+                <label>UserId: </label>
+              </td>
+              <td>
+                <label>{{selectedUser.userid}}</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Vorname: </label>
+              </td>
+              <td>
+                <label *ngIf="!isEdit">{{selectedUser.firstName}}</label>
+                <input *ngIf="isEdit" [(ngModel)]="selectedUser.firstName" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Nachname: </label>
+              </td>
+              <td>
+                <label *ngIf="!isEdit">{{selectedUser.lastName}}</label>
+                <input *ngIf="isEdit" [(ngModel)]="selectedUser.lastName" />
+              </td>
+            </tr>
+          </table>
+          <button type="button" class="btn btn-info" (click)="onBack()">
+            <span><i class="glyphicon glyphicon-arrow-left btn-icon" aria-hidden="true"></i></span> Zurück zur Übersicht
+          </button>
+          <button type="button" class="btn btn-danger" (click)="deleteSelectedUser()">
+              <span><i class="glyphicon glyphicon-trash btn-icon" aria-hidden="true"></i></span> Löschen
+            </button>
+          <button type="button" class="btn btn-primary" (click)="toggleButton()">
+            <span><i class="{{glyphIcon}}" aria-hidden="true"></i></span> {{editButtonText}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

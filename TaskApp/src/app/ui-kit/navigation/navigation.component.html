@@ -1,0 +1,22 @@
+<div (window:resize)="onResize($event)">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars togglebutton fixforie"></span>
+            </button>
+            </div>
+            <div class="container">
+                <span class="fa fa-sign-out pull-right"></span>
+                <div tabindex="-1" class="collapse navbar-collapse overlay" [ngClass]="{ 'in': isIn }" #navigation (blur)="closeToggle()">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a routerLink="/tasks" routerLinkActive="active">Aufgaben</a></li>
+                        <li><a routerLink="/users" routerLinkActive="active">Benutzer</a></li>
+                        <li><a routerLink="/kanban" routerLinkActive="active">KanbanBoard</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

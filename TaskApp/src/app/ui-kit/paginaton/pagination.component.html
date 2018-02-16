@@ -1,0 +1,7 @@
+<pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+<br/>
+<pagination [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+<br/>
+<pagination [directionLinks]="false" [boundaryLinks]="true" [totalItems]="totalItems" [(ngModel)]="currentPage"></pagination>
+<br/>
+<pagination [directionLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event"></pagination>

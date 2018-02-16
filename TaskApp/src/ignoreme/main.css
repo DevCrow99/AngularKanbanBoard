@@ -1,0 +1,79 @@
+/* ################## Primärfarben ################## */
+/* ################## Sekundärfarben ################## */
+.btn-primary.active,
+.btn-primary:active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: #003273;
+  border-color: #003273;
+}
+:host /deep/ .well {
+  background-color: #E6EEFF;
+}
+:host /deep/ th {
+  background-color: #E6EEFF;
+}
+:host /deep/ b {
+  color: #000;
+}
+ /deep/ .btn-default {
+  background: #fff;
+  color: #000;
+  border-radius: 3px;
+}
+ /deep/ .btn-info.active,
+.btn-info:active,
+.open > .dropdown-toggle.btn-info {
+  background-color: #003273;
+  border-color: #003273;
+  color: #fff;
+}
+ /deep/ .btn-info.active > .text-info,
+.btn-info:active,
+.open > .dropdown-toggle.btn-info {
+  background-color: #003273;
+  border-color: #003273;
+  color: #fff;
+}
+:host /deep/ .btn-info.active > .text-info,
+.btn-info[_ngcontent-c4]:active,
+.open[_ngcontent-c4] > .dropdown-toggle.btn-info[_ngcontent-c4] {
+  background-color: transparent;
+  border-color: transparent;
+}
+:host /deep/ .btn:hover {
+  border-radius: 3px;
+}
+:host /deep/ .text-info {
+  color: #000;
+}
+:host /deep/ .btn.btn-sm.btn-info.active.btn-default {
+  background-color: #003273;
+  border-color: #003273;
+}
+:host /deep/ .btn.btn-sm.btn-info.active.btn-default:hover {
+  background-color: #25ade9;
+  border-color: #25ade9;
+}
+:host /deep/ .btn.btn-sm.btn-default:hover > .text-muted.text-info {
+  color: #fff;
+}
+:host /deep/ .btn.btn-default.btn-info.active:active,
+.btn.btn-default.btn-info.active:focus {
+  background-color: #003273;
+}
+:host /deep/ .btn.btn-default.btn-info.active:hover {
+  background-color: #25ade9;
+  border-color: transparent;
+}
+:host /deep/ .btn.btn-default.btn-sm.disabled {
+  color: #000;
+}
+:host /deep/ .pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: #003273;
+  border-color: #003273;
+}

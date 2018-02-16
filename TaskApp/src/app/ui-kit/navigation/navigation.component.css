@@ -1,0 +1,149 @@
+/* Navigation background */
+
+.navbar-fixed-top {
+    background-color: white;
+    position: relative;
+}
+
+.navbar-nav {
+    margin-left: 95%;
+}
+
+
+/* Text inside the list tag */
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #003273;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* Text (hover) inside the list tag */
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #25ade9;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+/* Button to expand on mobile view */
+
+.navbar-inverse .navbar-toggle {
+    border-color: transparent;
+}
+
+
+/* Button (hover & focus) to expand on mobile view */
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: default;
+}
+
+
+/* Icon inside the button (mobile view) */
+
+.fa {
+    font-size: 24px;
+}
+
+
+/* Icon (hover) inside the button (mobile view) */
+
+.fa:hover {
+    color: #25ade9;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 5;
+}
+
+.navbar-inverse[_ngcontent-c1] .navbar-nav[_ngcontent-c1]>li[_ngcontent-c1]>a[_ngcontent-c1] {
+    color: white;
+}
+
+.navbar-inverse[_ngcontent-c1][_ngcontent-c1] .navbar-nav[_ngcontent-c1][_ngcontent-c1]>li[_ngcontent-c1][_ngcontent-c1]>a[_ngcontent-c1][_ngcontent-c1] {
+    color: white;
+    background-color: #003273;
+    width: 15em;
+    font-weight: normal;
+}
+
+.navbar-inverse[_ngcontent-c1][_ngcontent-c1] .navbar-nav[_ngcontent-c1][_ngcontent-c1]>li[_ngcontent-c1][_ngcontent-c1]>a[_ngcontent-c1][_ngcontent-c1]:hover {
+    background-color: #25ade9;
+    width: 15em;
+    color: white;
+}
+
+.fa-sign-out {
+    margin-top: -2em;
+    margin-right: -0.7em;
+}
+
+@media (min-width: 768px) {
+    .navbar-inverse[_ngcontent-c1][_ngcontent-c1] .navbar-nav[_ngcontent-c1][_ngcontent-c1]>li[_ngcontent-c1][_ngcontent-c1]>a[_ngcontent-c1][_ngcontent-c1] {
+        color: #003273;
+        background-color: transparent;
+        width: auto;
+        font-weight: bold;
+    }
+    .navbar-inverse[_ngcontent-c1][_ngcontent-c1] .navbar-nav[_ngcontent-c1][_ngcontent-c1]>li[_ngcontent-c1][_ngcontent-c1]>a[_ngcontent-c1][_ngcontent-c1]:hover {
+        background-color: transparent;
+        width: auto;
+        color: #25ade9;
+        font-weight: bold;
+    }
+    .fa-sign-out {
+        margin-top: 0.4em;
+        margin-right: -2em;
+    }
+}
+
+.nav>li>a {
+    color: #fff;
+    background-color: #003273;
+    width: 15em;
+}
+
+.nav>li {
+    padding-left: 15px;
+}
+
+.nav>li>a:hover {
+    background-color: #25ade9;
+}
+
+.navbar-nav {
+    margin: 0px -15px;
+}
+
+.navbar {
+    margin: 0;
+}
+
+div:focus {
+    outline: none;
+}
+
+.navbar-header {
+    display: inline-block;
+}
+
+.active {
+    color: #25ade9 !important;
+}
+
+@media (max-width: 768px) {
+    .active:hover {
+        color: white !important;
+    }
+    .overlay {
+        left: 0;
+    }
+}

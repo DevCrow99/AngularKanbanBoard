@@ -1,0 +1,24 @@
+/* ################## Primärfarben ################## */
+
+
+/* ################## Sekundärfarben ################## */
+
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary {
+    background-color: #003273;
+    border-color: #003273;
+}
+
+.btn-primary,
+.btn-primary:focus {
+    background: white;
+    color: black;
+    border-radius: 0;
+    border-color: black;
+    outline: none !important;
+}
+
+.dropdown-menu {
+    border-radius: 0 !important;
+}

@@ -1,0 +1,32 @@
+<div class="fixedbackground">
+<section id="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Benutzerübersicht</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr class="firstrow">
+              <th>UserId</th>
+              <th>Vorname</th>
+              <th>Nachnname</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of userData" (click)="navigateToClickedUser(item.userid)">
+              <td>{{item.userid}}</td>
+              <td>{{item.firstName}}</td>
+              <td>{{item.lastName}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary" (click)="navigateToCreateUser()">
+            <span><i class="glyphicon glyphicon-plus btn-icon" aria-hidden="true"></i></span> User erstellen
+          </button>
+
+      </div>
+    </div>
+  </div>
+</section>
+</div>

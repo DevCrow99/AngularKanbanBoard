@@ -1,0 +1,63 @@
+.table.table-striped:hover {
+  cursor: pointer;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+.floating-class{
+  float: left;
+}
+
+.toDoCell{
+  background-color: darkkhaki;
+  height: 500px;
+  overflow: auto;
+}
+
+
+.processingCell{
+  background-color: darkkhaki;
+  height: 500px;
+  overflow: auto;
+}
+
+
+.doneCell{
+  background-color: darkkhaki;
+  height: 500px;
+  overflow: auto;
+}
+
+.kanbanHeadingToDo{
+  margin-bottom: -5%;
+  padding-right: 65%;
+}
+
+.kanbanHeadingProcessing{
+  margin-bottom: -5%;
+}
+
+.kanbanHeadingDone{
+  padding-left: 65%;
+}
+
+.cellColor{
+  cursor: pointer;
+  background-color: cadetblue;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+

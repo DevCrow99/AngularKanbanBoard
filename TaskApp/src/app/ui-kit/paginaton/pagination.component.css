@@ -1,0 +1,38 @@
+/* ################## Primärfarben ################## */
+
+
+/* ################## Sekundärfarben ################## */
+
+:host /deep/ .pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: #003273;
+    border-color: #003273;
+}
+
+:host /deep/ .pagination-sm>li:last-child>a,
+.pagination-sm>li:last-child>span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+:host /deep/ .pagination>li:last-child>a,
+.pagination>li:last-child>span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+:host /deep/ .pagination>li:first-child>a,
+.pagination>li:first-child>span {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+:host /deep/ .pagination-sm>li:first-child>a,
+.pagination-sm>li:first-child>span {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

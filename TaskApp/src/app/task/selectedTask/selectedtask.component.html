@@ -1,0 +1,130 @@
+<div class="fixedbackground">
+  <section id="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="row paddingFormElements">
+            <div class="col-md-12">
+              <h1 align="center">Aufgabe bearbeiten</h1>
+            </div>
+          </div>
+
+          <form #selectedTaskForm="ngForm">
+
+          <div class="row paddingFormElements">
+            <div class="col-md-2">
+              <label class="labelFormSize">AufgabenID: </label>
+            </div>
+            <div class="col-md-10">
+              <label>{{ selectedTask.taskid }}</label>
+            </div>
+          </div>
+
+          <div class="row paddingFormElements" *ngIf="!isEdit">
+            <div class="col-md-2">
+              <label class="labelFormSize">Ersteller: </label>
+            </div>
+            <div class="col-md-10" *ngIf="selectedTask.creator">
+              <label>{{ selectedTask.creator.firstName }}</label>
+            </div>
+          </div>
+
+          <div class="row paddingFormElements" *ngIf="isEdit">
+            <div class="col-md-2">
+              <label class="labelFormSize">Ersteller: </label>
+            </div>
+            <div class="col-md-10">
+              <select id="userid" name="userid" class="form-control fullscreen" [(ngModel)]="selectedUser.userid" #userid="ngModel" required>
+                <option value="" disabled selected>Wähle den Ersteller</option>
+                <option *ngFor="let user of userData" [ngValue]="user.userid">{{ user.firstName }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row paddingFormElements">
+            <div class="col-md-2">
+              <label class="labelFormSize">Aufgabenname: </label>
+            </div>
+            <div class="col-md-10">
+              <label *ngIf="!isEdit">{{selectedTask.name}}</label>
+              <input id="name" name="name" class="form-control fullscreen" *ngIf="isEdit" [(ngModel)]="selectedTask.name" required minlength="4" #name="ngModel"/>
+            </div>
+          </div>
+
+          <div class="row paddingFormElements">
+            <div class="col-md-2">
+              <label class="labelFormSize">Anfangsdatum: </label>
+            </div>
+            <div class="col-md-10">
+              <label>{{selectedTask.startDate}}</label>
+            </div>
+          </div>
+
+          <div class="row paddingFormElements">
+            <div class="col-md-2">
+              <label class="labelFormSize">Enddatum: </label>
+            </div>
+            <div class="col-md-10">
+              <label *ngIf="!isEdit">{{selectedTask.endDate}}</label>
+            </div>
+            <div *ngIf="isEdit">
+              <div class="col-md-5">
+                <input id="bsValue" name="bsValue" class="form-control fullscreen" [minDate]="minDate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="bsValue" />
+              </div>
+              <div class="col-md-5">
+                <button class="btn datepickerButton fullscreen" (click)="dp.toggle()">Date Picker</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-info buttonStyle" (click)="onBack()">
+                <span>
+                  <i class="glyphicon glyphicon-arrow-left btn-icon" aria-hidden="true"></i>
+                </span> Zurück zur Übersicht
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-danger buttonStyle" (click)="deleteSelectedTask()">
+                <span>
+                  <i class="glyphicon glyphicon-trash btn-icon" aria-hidden="true"></i>
+                </span> Löschen
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-primary buttonStyle" (click)="toggleButton()">
+                <span>
+                  <i class="{{glyphIcon}}" aria-hidden="true"></i>
+                </span> {{editButtonText}}
+              </button>
+            </div>
+          </div>
+
+          <div class="errorStyle">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+              <div *ngIf="name.errors.required">
+                Ein Name muss vorhanden sein.
+              </div>
+              <div *ngIf="name.errors.minlength">
+                Der Name muss mindestens 4 Zeichen lang sein.
+              </div>
+            </div>
+
+            <div *ngIf="userid.invalid && (userid.dirty || userid.touched)" class="alert alert-danger">
+              <div *ngIf="userid.errors.required">
+                Ein Ersteller muss vorhanden sein.
+              </div>
+            </div>
+
+          </div>
+
+
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

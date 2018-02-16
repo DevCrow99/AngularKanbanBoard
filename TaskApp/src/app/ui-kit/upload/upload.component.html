@@ -1,0 +1,9 @@
+<form>
+  <div class="input-group">
+    <div class="fileUpload btn btn-primary">
+      <span><i class="fa fa-white fa-upload" aria-hidden="true"></i> Datei hochladen</span>
+      <input type="file" class="upload" name="attachments" id="attachments" (change)="onChange(fileInput.files)" #fileInput multiple/>
+    </div>
+    <label class="output-label" style="margin-left: 0.5em;">{{selectedFiles}}</label>
+  </div>
+</form>

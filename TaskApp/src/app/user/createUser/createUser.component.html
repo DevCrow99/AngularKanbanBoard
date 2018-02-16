@@ -1,0 +1,35 @@
+<div class="fixedbackground">
+    <section id="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Benutzeranlage</h2>
+            <table>
+              <tr>
+                <td>
+                  <label>Vorname: </label>
+                </td>
+                <td>
+                  <input [(ngModel)]="newUser.firstName" />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Nachname: </label>
+                </td>
+                <td>
+                  <input [(ngModel)]="newUser.lastName" />
+                </td>
+              </tr>
+            </table>
+            <button type="button" class="btn btn-danger" (click)="onBack()">
+              <span><i class="glyphicon glyphicon-remove btn-icon" aria-hidden="true"></i></span>Abbrechen
+            </button>
+            <button type="button" class="btn btn-primary" (click)="createUser()">
+              <span><i class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></i></span>Speichern
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
